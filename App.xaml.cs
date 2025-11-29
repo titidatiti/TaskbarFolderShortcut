@@ -53,9 +53,20 @@ namespace TaskbarFolderShortcut
                 contextMenu.Items.Add(header);
                 contextMenu.Items.Add("-"); // Separator
 
-                contextMenu.Items.Add("Settings", null, (s, args) => OpenSettings());
+                // Settings
+                var settingsItem = new ToolStripMenuItem("Settings", Helpers.FontIconHelper.CreateIcon("\uE713"), (s, args) => OpenSettings());
+                contextMenu.Items.Add(settingsItem);
+
+                // Refresh
+                var refreshItem = new ToolStripMenuItem("Refresh", Helpers.FontIconHelper.CreateIcon("\uE72C"), (s, args) => RefreshFolders());
+                contextMenu.Items.Add(refreshItem);
+
                 contextMenu.Items.Add("-"); // Separator
-                contextMenu.Items.Add("Exit", null, (s, args) => Shutdown());
+
+                // Exit
+                var exitItem = new ToolStripMenuItem("Exit", Helpers.FontIconHelper.CreateIcon("\uE7E8"), (s, args) => Shutdown());
+                contextMenu.Items.Add(exitItem);
+
                 _notifyIcon.ContextMenuStrip = contextMenu;
             }
             catch (Exception ex)
@@ -83,6 +94,11 @@ namespace TaskbarFolderShortcut
                 SettingsService.Save(currentSettings);
                 _mainWindow.LoadRootFolder(); // Reload the menu
             }
+        }
+
+        private void RefreshFolders()
+        {
+            _mainWindow.LoadRootFolder();
         }
 
         protected override void OnExit(ExitEventArgs e)
