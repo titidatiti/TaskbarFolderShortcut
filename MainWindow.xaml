@@ -11,6 +11,7 @@
         <ContextMenu x:Key="RootContextMenu" x:Name="RootContextMenu" 
                      ItemTemplate="{StaticResource FileSystemItemTemplate}"
                      ItemContainerStyle="{StaticResource FileSystemMenuItemStyle}"
+                     Style="{StaticResource ModernContextMenuStyle}"
                      Placement="MousePoint"
                      Closed="RootContextMenu_Closed">
         </ContextMenu>
