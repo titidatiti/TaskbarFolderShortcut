@@ -13,7 +13,7 @@ namespace TrayFolder.Services
     {
         private static readonly string SettingsFile = Path.Combine(
             Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),
-            "TaskbarFolderShortcut",
+            "TrayFolder",
             "settings.json");
 
         public static AppSettings Load()
