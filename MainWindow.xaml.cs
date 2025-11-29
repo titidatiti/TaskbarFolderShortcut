@@ -1,8 +1,8 @@
 ﻿using System.Windows;
-using TaskbarFolderShortcut.Models;
-using TaskbarFolderShortcut.Services;
+using TrayFolder.Models;
+using TrayFolder.Services;
 
-namespace TaskbarFolderShortcut
+namespace TrayFolder
 {
     public partial class MainWindow : Window
     {

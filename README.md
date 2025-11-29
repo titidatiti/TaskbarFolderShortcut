@@ -1,4 +1,4 @@
-# Taskbar Folder Shortcut
+# TrayFolder
 
 ![App Icon](docs/images/icon.png)
 
@@ -15,13 +15,13 @@ A Windows tray application that simulates the "Add folder to taskbar" functional
 
 ## Getting Started
 1.  Download the latest release.
-2.  Run `TaskbarFolderShortcut.exe`.
+2.  Run `TrayFolder.exe`.
 3.  Right-click the tray icon to configure your root folder.
 
 ## How to Keep Icon Visible
 By default, Windows might hide the tray icon in the overflow menu. To keep it always visible on the taskbar:
 1.  Click the "Show hidden icons" arrow (^) in the system tray.
-2.  Drag the **Taskbar Folder Shortcut** icon from the overflow menu to the main taskbar area.
+2.  Drag the **TrayFolder** icon from the overflow menu to the main taskbar area.
 
 ## License
 [MIT License](LICENSE)

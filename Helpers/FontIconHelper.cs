@@ -1,7 +1,7 @@
 using System.Drawing;
 using System.Drawing.Text;
 
-namespace TaskbarFolderShortcut.Helpers
+namespace TrayFolder.Helpers
 {
     public static class FontIconHelper
     {

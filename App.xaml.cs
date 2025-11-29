@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Windows;
 using System.Windows.Forms; // For NotifyIcon
-using TaskbarFolderShortcut.Services;
-using TaskbarFolderShortcut.Views;
+using TrayFolder.Services;
+using TrayFolder.Views;
 using Application = System.Windows.Application;
 
-namespace TaskbarFolderShortcut
+namespace TrayFolder
 {
     public partial class App : Application
     {
@@ -25,7 +25,7 @@ namespace TaskbarFolderShortcut
                 // Initialize Tray Icon
                 _notifyIcon = new NotifyIcon
                 {
-                    Text = "Taskbar Folder Shortcut"
+                    Text = "TrayFolder"
                 };
 
                 try
@@ -48,7 +48,7 @@ namespace TaskbarFolderShortcut
                 var contextMenu = new ContextMenuStrip();
                 
                 // Add App Name Header
-                var header = new ToolStripLabel("Taskbar Folder Shortcut");
+                var header = new ToolStripLabel("TrayFolder");
                 header.Font = new System.Drawing.Font(header.Font, System.Drawing.FontStyle.Bold);
                 header.Margin = new Padding(0, 2, 0, 2);
                 contextMenu.Items.Add(header);

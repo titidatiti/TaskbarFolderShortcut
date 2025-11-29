@@ -2,7 +2,7 @@ using System;
 using System.IO;
 using System.Text.Json;
 
-namespace TaskbarFolderShortcut.Services
+namespace TrayFolder.Services
 {
     public class AppSettings
     {

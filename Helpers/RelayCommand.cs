@@ -1,7 +1,7 @@
 using System;
 using System.Windows.Input;
 
-namespace TaskbarFolderShortcut.Helpers
+namespace TrayFolder.Helpers
 {
     public class RelayCommand : ICommand
     {

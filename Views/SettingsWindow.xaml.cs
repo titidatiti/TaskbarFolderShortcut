@@ -1,8 +1,8 @@
 using System.Windows;
-using TaskbarFolderShortcut.Services;
+using TrayFolder.Services;
 using System.Windows.Forms; // For FolderBrowserDialog
 
-namespace TaskbarFolderShortcut.Views
+namespace TrayFolder.Views
 {
     public partial class SettingsWindow : Window
     {

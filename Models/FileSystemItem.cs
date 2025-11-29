@@ -8,9 +8,9 @@ using System.Drawing;
 
 using System.Diagnostics;
 using System.Windows.Input;
-using TaskbarFolderShortcut.Helpers;
+using TrayFolder.Helpers;
 
-namespace TaskbarFolderShortcut.Models
+namespace TrayFolder.Models
 {
     public class FileSystemItem
     {

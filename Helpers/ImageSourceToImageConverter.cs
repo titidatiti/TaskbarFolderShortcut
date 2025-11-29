@@ -4,7 +4,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Media;
 
-namespace TaskbarFolderShortcut.Helpers
+namespace TrayFolder.Helpers
 {
     public class ImageSourceToImageConverter : IValueConverter
     {
