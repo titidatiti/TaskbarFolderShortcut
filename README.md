@@ -1,6 +1,6 @@
 # TrayFolder
 
-![App Icon](docs/images/icon.png)
+<img src="docs/images/icon.png" width="64" height="64" alt="App Icon" />
 
 A Windows tray application that simulates the "Add folder to taskbar" functionality. It allows you to access your favorite folders quickly from the system tray with a modern, customizable menu.
 
