@@ -15,7 +15,9 @@
     <Style x:Key="FileSystemMenuItemStyle" TargetType="MenuItem">
         <!-- Header is set by ItemTemplate -->
         <Setter Property="ItemsSource" Value="{Binding Children}" />
-        <Setter Property="Command" Value="{Binding OpenCommand}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="StaysOpenOnClick" Value="True" />
+        <!-- Removed Command Setter to stop executing OpenCommand on any click -->
         
         <!-- Bind Icon using Converter -->
         <Setter Property="Icon" Value="{Binding SysIcon, Converter={StaticResource ImageSourceToImageConverter}}" />
@@ -34,7 +36,12 @@
                             BorderThickness="{TemplateBinding BorderThickness}" 
                             Background="{TemplateBinding Background}" 
                             SnapsToDevicePixels="True">
-                        <Grid Margin="3">
+                        <Border.InputBindings>
+                            <MouseBinding MouseAction="LeftClick" Command="{Binding OpenCommand}" />
+                            <MouseBinding MouseAction="LeftDoubleClick" Command="{Binding OpenInExplorerCommand}" />
+                            <MouseBinding MouseAction="RightClick" Command="{Binding ShellContextMenuCommand}" />
+                        </Border.InputBindings>
+                        <Grid Margin="3" Background="Transparent">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="20"/>
                                 <ColumnDefinition Width="5"/>
@@ -59,7 +66,7 @@
                                               Content="{TemplateBinding Header}" 
                                               ContentStringFormat="{TemplateBinding HeaderStringFormat}" 
                                               ContentSource="Header" 
-                                              HorizontalAlignment="Left" 
+                                              HorizontalAlignment="Stretch" 
                                               VerticalAlignment="Center" 
                                               Margin="8,0,0,0"
                                               RecognizesAccessKey="True" 

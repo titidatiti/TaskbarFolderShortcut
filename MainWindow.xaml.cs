@@ -29,6 +29,14 @@ namespace TrayFolder
             _rootContextMenu.IsOpen = true;
         }
 
+        public void SetStaysOpen(bool staysOpen)
+        {
+            if (_rootContextMenu != null)
+            {
+                _rootContextMenu.StaysOpen = staysOpen;
+            }
+        }
+
         private void RootContextMenu_Closed(object sender, RoutedEventArgs e)
         {
             this.Hide();
