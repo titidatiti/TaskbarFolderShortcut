@@ -7,8 +7,8 @@ A Windows tray application that simulates the "Add folder to taskbar" functional
 ## Features
 -   **System Tray Integration**: Access folders via a tray icon.
 -   **Folder Navigation**: Browse files and subfolders in a hierarchical menu.
--   **Customizable**: Set your preferred root folder.
--   **Windows 11 Style**: Designed to blend in with the modern Windows aesthetic.
+-   **Open Folder**: Double click to open folders.
+-   **Right Click Menu**: Right click a file to open the right-click menu just like the file explorer.
 
 ## Screenshots
 ![App Preview](docs/images/preview.gif)
